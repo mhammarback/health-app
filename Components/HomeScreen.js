@@ -1,18 +1,28 @@
-import React from 'react'
-import LottieView from 'lottie-react-native'
+import React, { useState } from 'react'
+import styled from 'styled-components/native'
 
-import { Container, Title, InfoText } from './HomeScreenStyling'
+import { TextInput } from 'react-native'
+import { Container, Title } from './HomeScreenStyling'
+import { ButtonText } from './StartScreenStyling'
 
 export const HomeScreen = () => {
+  const [name, setName] = useState('name')
+  const [password, setPassword] = useState('password')
   return (
     <Container>
-       <Title>POWER APP!</Title>
-          <InfoText>
-            Inspired by the book "Nice girls don't get the corner office"
-            comes this app where you can shuffle through daily challenges that could
-            help improve your carrer!
-          </InfoText>  
-          <LottieView source={require('./Animation/hand.json')} autoPlay />          
+      <Title>One Million Stories</Title>
+        <TextInput
+          style={{ width: 230,height: 40, borderColor: 'gray', borderWidth: 1, margin: 5 }}
+          setName={text => setValue(text)}
+          value={name}
+        />   
+        <TextInput
+          style={{ width: 230,height: 40, borderColor: 'gray', borderWidth: 1 }}
+          setPassword={text => setValue(text)}
+          value={password}
+        />  
+
+        <Button><Text>Log in</Text></Button>
     </Container> 
   )
 }
@@ -21,6 +31,15 @@ export const HomeScreen = () => {
 //import LottieView from 'react-native-web-lottie'
 
 
+export const Button = styled.TouchableOpacity`
+  background-color:#2B97F3; 
+  padding:8px;
+  border-radius:4px;
+  margin: 10px 0px;
+  width: 230px;
+`
 
-
-
+export const Text = styled.Text`
+  color: #ffffff;
+  font-size:18px;
+`
