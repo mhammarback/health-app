@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components/native'
 
-import { TextInput } from 'react-native'
+import { TextInput, Image } from 'react-native'
 import { Container, Title } from './HomeScreenStyling'
 
 export const HomeScreen = () => {
@@ -9,7 +9,9 @@ export const HomeScreen = () => {
   const [password, setPassword] = useState('password')
   return (
     <Container>
+      <Logo source={require('../assets/conversation.svg')} />
       <Title>One Million Stories</Title>
+      
         <TextInput
           style={{ width: 230,height: 40, borderColor: 'gray', borderWidth: 1, margin: 5 }}
           setName={text => setValue(text)}
@@ -22,6 +24,7 @@ export const HomeScreen = () => {
         />  
 
         <Button><Text>Log in</Text></Button>
+        
     </Container> 
   )
 }
@@ -41,4 +44,10 @@ export const Button = styled.TouchableOpacity`
 export const Text = styled.Text`
   color: #ffffff;
   font-size:18px;
+`
+
+export const Logo = styled.Image`
+  width: 200px;
+  height: 200px;
+  tintColor: rgb(219, 112, 147);
 `
