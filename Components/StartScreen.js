@@ -1,40 +1,43 @@
 import React, { useState } from 'react'
+import styled from 'styled-components/native'
 
-import { Container, Title, ResultText, ChallengeButton, ButtonText } from './StartScreenStyling'
+import { TextInput } from 'react-native'
+import { Container, Title, ButtonText } from './StartScreenStyling'
 
 export const StartScreen = () => { 
   const [challenge, setChallenge] = useState('')
+  const [story, setStory] = useState('Share your story here...')
+  const [author, setAuthor] = useState('Your name or anonymous')
 
   const onClick = (event) => {
     event.preventDefault()
       setChallenge(challengeArray)
   }
   
-  let challengeArray = 
-  [
-   'Do not apologize today!',
-   'Be bold! take extra place in a meeting!', 
-   'Do not offer to do meaningless shores!',
-   'Practice saying NO!', 
-   'Do not say "I am sorry" today!',
-   'Do not work overtime!',
-   'Ask a colleague out for lunch!', 
-   'Do not take the blame for someone elses mistake!',
-   'You do not need everybody to like you!', 
-   'Take more breaks then you usually do and mingle with colleagues!', 
-   'Tell a colleuge something you have done well latley!', 
-   'Brag about yourself today!', 
-  ]
-
-  const random = Math.floor(Math.random() * challengeArray.length)
-
   return (
     <Container>
-      <Title>DAILY EMPOWERMENT CHALLENGES</Title> 
+      <Title>Community</Title> 
+      <TextInput
+          style={{ width: 230,height: 160, borderColor: 'gray', borderWidth: 1 }}
+          setStory={text => setValue(text)}
+          value={story}
+        />  
+       <TextInput
+          style={{ width: 230,height: 30, borderColor: 'gray', borderWidth: 1, margin: 5 }}
+          setAuthor={text => setValue(text)}
+          value={author}
+        />    
         <ChallengeButton onPress={onClick}>
-          <ButtonText>CHANGE CHALLENGE</ButtonText>
+          <ButtonText>SUBMIT</ButtonText>
         </ChallengeButton>
-        <ResultText>{random, challengeArray[random]}</ResultText>  
     </Container>
   )
 }
+
+export const ChallengeButton = styled.TouchableOpacity`
+  background-color:#9A0A35; 
+  padding:8px;
+  border-radius:4px;
+  margin: 10px 0px;
+  width: 230px;
+`

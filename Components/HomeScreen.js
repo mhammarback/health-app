@@ -3,7 +3,6 @@ import styled from 'styled-components/native'
 
 import { TextInput } from 'react-native'
 import { Container, Title } from './HomeScreenStyling'
-import { ButtonText } from './StartScreenStyling'
 
 export const HomeScreen = () => {
   const [name, setName] = useState('name')
@@ -32,7 +31,7 @@ export const HomeScreen = () => {
 
 
 export const Button = styled.TouchableOpacity`
-  background-color:#2B97F3; 
+  background-color:#9A0A35; 
   padding:8px;
   border-radius:4px;
   margin: 10px 0px;

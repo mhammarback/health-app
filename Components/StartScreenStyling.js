@@ -4,15 +4,15 @@ export const Container = styled.View`
   text-align:center;
   align-items: center; 
   align-content:center; 
-  justify-content:center; 
   height:100%;
-  background-color: papayawhip;
+  background-color: white;
 `
 
 export const Title = styled.Text`
   font-size: 22px;
   color: palevioletred;
   padding-bottom:20px; 
+  margin: 50px 0px 20px;
 `
 
 export const IntroText = styled.Text`
