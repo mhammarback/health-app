@@ -12,11 +12,13 @@ export const Container = styled.View`
 
 export const Title = styled.Text`
   font-size: 30px;
-  color: palevioletred; 
+  color: #165e6d; 
   text-align:center;
   margin: 20px 0px;
 `
 
+//palevioletred
+// #dce3e3 background 
 export const InfoText = styled.Text`
   font-size: 18px;
   color: black; 

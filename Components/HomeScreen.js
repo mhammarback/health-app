@@ -24,7 +24,6 @@ export const HomeScreen = () => {
         />  
 
         <Button><Text>Log in</Text></Button>
-        
     </Container> 
   )
 }
