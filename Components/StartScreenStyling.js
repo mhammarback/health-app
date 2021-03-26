@@ -10,7 +10,7 @@ export const Container = styled.View`
 
 export const Title = styled.Text`
   font-size: 22px;
-  color: palevioletred;
+  color: #006161;
   padding-bottom:20px; 
   margin: 50px 0px 20px;
 `
@@ -27,7 +27,7 @@ export const ResultText = styled.Text`
 `
 
 export const ChallengeButton = styled.TouchableOpacity`
-  background-color:#2B97F3; 
+  background-color:#006161; 
   padding:8px;
   border-radius:4px;
 `

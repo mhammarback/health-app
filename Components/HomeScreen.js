@@ -10,7 +10,7 @@ export const HomeScreen = () => {
   return (
     <Container>
       <Logo source={require('../assets/conversation.svg')} />
-      <Title>One Million Stories</Title>
+      <Title>1 Million Stories</Title>
       
         <TextInput
           style={{ width: 230,height: 40, borderColor: 'gray', borderWidth: 1, margin: 5 }}
@@ -33,7 +33,7 @@ export const HomeScreen = () => {
 
 
 export const Button = styled.TouchableOpacity`
-  background-color:#9A0A35; 
+  background-color:#006161; 
   padding:8px;
   border-radius:4px;
   margin: 10px 0px;
@@ -48,5 +48,8 @@ export const Text = styled.Text`
 export const Logo = styled.Image`
   width: 200px;
   height: 200px;
-  tintColor: rgb(219, 112, 147);
+  tintColor:#006161;
 `
+
+//#9A0A35
+//tint rgb(219, 112, 147)

@@ -35,7 +35,7 @@ export const StartScreen = () => {
 }
 
 export const ChallengeButton = styled.TouchableOpacity`
-  background-color:#9A0A35; 
+  background-color:#006161; 
   padding:8px;
   border-radius:4px;
   margin: 10px 0px;
