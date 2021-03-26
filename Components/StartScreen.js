@@ -30,6 +30,18 @@ export const StartScreen = () => {
         <ChallengeButton onPress={onClick}>
           <ButtonText>SUBMIT</ButtonText>
         </ChallengeButton>
+
+  
+        <Box>
+          <BoxText>Group name</BoxText>
+          <SmallButton>
+            <SmallTextButton>START</SmallTextButton>
+          </SmallButton>
+        </Box>
+
+        <SmallButton>
+          <SmallTextButton>CHAT</SmallTextButton>
+        </SmallButton>
     </Container>
   )
 }
@@ -40,4 +52,28 @@ export const ChallengeButton = styled.TouchableOpacity`
   border-radius:4px;
   margin: 10px 0px;
   width: 230px;
+`
+export const SmallButton = styled.TouchableOpacity`
+  background-color:#006161; 
+  width: 60px; 
+  padding: 5px;
+  border-radius: 5px;
+`
+export const SmallTextButton = styled.Text`
+  color: white;
+  font-size:16px;
+`
+export const Box = styled.View`
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-content: space-around;
+  border: lightgrey;
+  border-radius: 5px; 
+  padding: 10px;
+  width: 230px;
+  margin: 20px 0px; 
+`
+export const BoxText = styled.Text`
+  font-size: 16px;
 `
